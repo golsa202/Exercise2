@@ -15,11 +15,12 @@ for x in range (users_number):
     data.append(dict)
 
 search_name = input ("Enter the name to search : ") 
-
+found=False # variable for detecting user
 for user in data:
     if user['name'] == search_name:
+        found=True
         print ("age :" + user['age'])
         break
-    elif list_name != search_name:
-        print("This name doesn't exist!")
-        break
+
+if found=False: # if cannot find user with given name
+    print("This name doesn't exist!")
